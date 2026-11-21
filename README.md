@@ -8,7 +8,7 @@ lizhiguang 的个人编程开发协作 skill，适用于代码修改、排障、
 
 ```powershell
 $skillRoot = "$env:USERPROFILE\.codex\skills"
-git clone https://github.com/OWNER/lizhiguang-dev.git "$skillRoot\lizhiguang-dev"
+git clone https://github.com/chi-kwongli/lizhiguang-dev.git "$skillRoot\lizhiguang-dev"
 ```
 
 已有目录更新：
@@ -23,7 +23,7 @@ git -C "$env:USERPROFILE\.codex\skills\lizhiguang-dev" pull --ff-only
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/OWNER/lizhiguang-dev.git ~/.codex/skills/lizhiguang-dev
+git clone https://github.com/chi-kwongli/lizhiguang-dev.git ~/.codex/skills/lizhiguang-dev
 ```
 
 ## 自动同步到 GitHub
@@ -31,7 +31,7 @@ git clone https://github.com/OWNER/lizhiguang-dev.git ~/.codex/skills/lizhiguang
 首次配置远端并推送：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\sync-github.ps1 -Remote https://github.com/OWNER/lizhiguang-dev.git
+powershell -ExecutionPolicy Bypass -File .\scripts\sync-github.ps1 -Remote https://github.com/chi-kwongli/lizhiguang-dev.git
 ```
 
 脚本使用 Git Credential Manager 或 SSH 认证，不把 Token 写进 URL、日志或仓库。
@@ -39,7 +39,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\sync-github.ps1 -Remote https
 启动文件监听同步：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\watch-and-sync.ps1 -Remote https://github.com/OWNER/lizhiguang-dev.git
+powershell -ExecutionPolicy Bypass -File .\scripts\watch-and-sync.ps1 -Remote https://github.com/chi-kwongli/lizhiguang-dev.git
 ```
 
 监听进程发现 skill 文件变化后会自动追加 `CHANGELOG.md`、提交并推送。停止监听可关闭对应 PowerShell 进程；需要长期运行时可通过任务计划程序在登录时启动。
@@ -47,7 +47,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\watch-and-sync.ps1 -Remote ht
 安装为当前 Windows 用户的登录任务（推荐）：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\scripts\install-auto-sync.ps1 -Remote https://github.com/OWNER/lizhiguang-dev.git
+powershell -ExecutionPolicy Bypass -File .\scripts\install-auto-sync.ps1 -Remote https://github.com/chi-kwongli/lizhiguang-dev.git
 ```
 
 移除自动同步任务：

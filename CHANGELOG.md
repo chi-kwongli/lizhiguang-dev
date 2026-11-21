@@ -6,3 +6,4 @@
 - 增加持续蒸馏、去重记录和敏感信息过滤。
 - 增加 GitHub 同步脚本、文件监听脚本和安装说明。
 - 增加 Windows 登录任务安装/卸载脚本，支持登录后持续自动同步。
+- 创建 GitHub 仓库并准备首次发布：`https://github.com/chi-kwongli/lizhiguang-dev`。
