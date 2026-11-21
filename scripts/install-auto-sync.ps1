@@ -33,5 +33,7 @@ try {
   $shortcut.WorkingDirectory = Split-Path -Parent $watcher
   $shortcut.WindowStyle = 7
   $shortcut.Save()
+  Start-Process -FilePath 'powershell.exe' -ArgumentList $arguments `
+    -WorkingDirectory (Split-Path -Parent $watcher) -WindowStyle Hidden
   Write-Warning "任务计划权限不足，已改用当前用户 Startup 自动启动：$shortcutPath"
 }
