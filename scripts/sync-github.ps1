@@ -17,7 +17,7 @@ if ($Remote) {
   elseif ($origin -ne $Remote) { git remote set-url origin $Remote }
 }
 if (-not (git remote get-url origin 2>$null)) {
-  throw '未配置 GitHub 远端。请使用 -Remote https://github.com/OWNER/lizhiguang-dev.git。'
+  throw '未配置 GitHub 远端。请使用 -Remote https://github.com/chi-kwongli/lizhiguang-dev.git。'
 }
 
 if (-not $Message) { $Message = "chore: 更新个人开发 skill $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" }

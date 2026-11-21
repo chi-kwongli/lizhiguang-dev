@@ -9,3 +9,4 @@
 - 创建 GitHub 仓库并准备首次发布：`https://github.com/chi-kwongli/lizhiguang-dev`。
 - 自动同步安装脚本增加无管理员权限时的 Startup 启动项降级方案。
 - Startup 降级方案安装后立即启动当前会话的后台监听器。
+- 清理同步脚本中残留的远端地址占位符。
