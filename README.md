@@ -44,6 +44,18 @@ powershell -ExecutionPolicy Bypass -File .\scripts\watch-and-sync.ps1 -Remote ht
 
 监听进程发现 skill 文件变化后会自动追加 `CHANGELOG.md`、提交并推送。停止监听可关闭对应 PowerShell 进程；需要长期运行时可通过任务计划程序在登录时启动。
 
+安装为当前 Windows 用户的登录任务（推荐）：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\install-auto-sync.ps1 -Remote https://github.com/OWNER/lizhiguang-dev.git
+```
+
+移除自动同步任务：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\uninstall-auto-sync.ps1
+```
+
 ## 更新日志
 
 每次自动同步会追加到 [CHANGELOG.md](CHANGELOG.md)，长期偏好仍记录在 `references/learning-log.md`。更新日志不记录密码、Token、Cookie 或业务数据。
