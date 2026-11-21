@@ -7,3 +7,4 @@
 - 增加 GitHub 同步脚本、文件监听脚本和安装说明。
 - 增加 Windows 登录任务安装/卸载脚本，支持登录后持续自动同步。
 - 创建 GitHub 仓库并准备首次发布：`https://github.com/chi-kwongli/lizhiguang-dev`。
+- 自动同步安装脚本增加无管理员权限时的 Startup 启动项降级方案。
